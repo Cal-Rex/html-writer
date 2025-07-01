@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/45.2.1/ckeditor5.css" />
-    <link rel="stylesheet" href="/script.js">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.tiny.cloud/1/yty5p9yk856o0uaf22b82gktb23dysxj8fzizk47re879xw4/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
     <title>Document</title>
-
 </head>
+
 <body>
-    <script src="https://cdn.ckeditor.com/ckeditor5/45.2.1/ckeditor5.umd.js"></script>
-    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 
-    <div id="editor">
-            <p>Hello from CKEditor 5!</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="padding-top: 20px;">
+                <h1 style="text-align: center;">HCS Email editor</h1>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-12">
 
+
+                <!-- Edior -->
+                <script>
+                    tinymce.init({
+                        selector: 'textarea',
+                        plugins: [
+                            // Core editing features
+                            'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
+                            // Your account includes a free trial of TinyMCE premium features
+                            // Try the most popular premium features until Jul 15, 2025:
+                            'checklist', 'mediaembed', 'casechange', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown', 'importword', 'exportword', 'exportpdf'
+                        ],
+                        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+                        tinycomments_mode: 'embedded',
+                        tinycomments_author: 'Author name',
+                        mergetags_list: [
+                            { value: 'First.Name', title: 'First Name' },
+                            { value: 'Email', title: 'Email' },
+                        ],
+                        ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
+                    });
+                </script>
+                <textarea placeholder="Start writing your email here, or copy and paste your draft in from Word...">
+                    
+                </textarea>
+                <!-- /editor -->
+
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

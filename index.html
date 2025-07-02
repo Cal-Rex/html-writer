@@ -47,13 +47,43 @@
 
                 <textarea id="hcs-draft"
                     placeholder="Start writing your email here, or copy and paste your draft in from Word...">
-                    
+
                 </textarea>
                 <!-- /editor -->
 
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <h5>Need to put images in your email? upload them to cloudinary to get a url for them:</h5>
+            </div>
+            <div class="col-12">
+                <div class="accordion" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <h6>Cloudinary (you must be logged in for this to show)</h6>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body" style="padding: 0px 0px;">
+                                <!-- cloudinary iframe -->
+                                <iframe
+                                    style="width: 100%; height: 100vh;"
+                                    src="https://console.cloudinary.com/app/c-cbb3da1482153f3883de367db24e8f/assets/media_library/homepage"
+                                    title="Healthcare Skills Cloudinary"></iframe>
+                                <!-- /cloudinary iframe -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
